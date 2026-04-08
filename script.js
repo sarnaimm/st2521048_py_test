@@ -1,4 +1,4 @@
-const storedUser = {username:"munkhsarnai", password:"@Dm1n"};
+const storedUser = {username:"admin", password:"@Dm1n"};
 
 function login(){
   const u = document.getElementById('username').value;

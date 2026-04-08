@@ -22,7 +22,7 @@ def test_1_login(driver):
     driver.get(BASE_URL)
     time.sleep(2)
 
-    driver.find_element(By.ID, "username").send_keys("munkhsarnai")
+    driver.find_element(By.ID, "username").send_keys("admin")
     time.sleep(1)
 
     driver.find_element(By.ID, "password").send_keys("@Dm1n")
@@ -57,7 +57,7 @@ def test_3_navigate_cameras(driver):
     # Login first
     driver.get(BASE_URL)
     time.sleep(2)
-    driver.find_element(By.ID, "username").send_keys("munkhsarnai")
+    driver.find_element(By.ID, "username").send_keys("admin")
     driver.find_element(By.ID, "password").send_keys("@Dm1n")
     driver.find_element(By.CSS_SELECTOR, ".login-card button").click()
     time.sleep(2)
