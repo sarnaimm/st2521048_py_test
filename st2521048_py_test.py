@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-BASE_URL = "file:///C:/Users/Yoga/Downloads/final_web_project/index.html"
+BASE_URL = "https://st2521048-py-test.vercel.app/"
 
 @pytest.fixture(scope="session")
 def driver():
