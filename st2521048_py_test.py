@@ -22,7 +22,7 @@ def test_1_login(driver):
     driver.get(BASE_URL)
     time.sleep(2)
 
-    driver.find_element(By.ID, "username").send_keys("admin")
+    driver.find_element(By.ID, "username").send_keys("munkhsarnai")
     time.sleep(1)
 
     driver.find_element(By.ID, "password").send_keys("@Dm1n")
@@ -57,7 +57,7 @@ def test_3_navigate_cameras(driver):
     # Login first
     driver.get(BASE_URL)
     time.sleep(2)
-    driver.find_element(By.ID, "username").send_keys("admin")
+    driver.find_element(By.ID, "username").send_keys("munkhsarnai")
     driver.find_element(By.ID, "password").send_keys("@Dm1n")
     driver.find_element(By.CSS_SELECTOR, ".login-card button").click()
     time.sleep(2)
@@ -153,12 +153,12 @@ def test_9_contact_form_valid_submit(driver):
 
     name_field = driver.find_element(By.ID, "name")
     name_field.clear()
-    name_field.send_keys("Georgi Ivanov")
+    name_field.send_keys("Munkhsarnai Munkhochir")
     time.sleep(1)
 
     email_field = driver.find_element(By.ID, "email")
     email_field.clear()
-    email_field.send_keys("georgi@example.com")
+    email_field.send_keys("sarnai@gmail.com")
     driver.execute_script("document.getElementById('email').dispatchEvent(new Event('input'));")
     time.sleep(1)
 
@@ -181,11 +181,8 @@ def test_9_contact_form_valid_submit(driver):
 def test_10_logout(driver):
     print("\nTest start: Logout")
 
-    # Click the Logout button (top right)
     driver.find_element(By.CSS_SELECTOR, ".logout").click()
     time.sleep(2)
-
-    # Check that the login page is visible again
     login_page = driver.find_element(By.ID, "loginPage")
     assert login_page.is_displayed(), "Login page should be visible after logout"
     print("Logout successful!")
